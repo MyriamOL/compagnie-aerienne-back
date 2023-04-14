@@ -1,12 +1,15 @@
 package fr.dawan.projetcompagnieaerienne.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Version;
 
@@ -35,6 +38,9 @@ private static final long serialVersionUID = 1L;
     
     @Column(name="mot_de_passe")
     private String motDePasse;
+    
+    @OneToMany(mappedBy = "utilisateur")
+    private List<Reservation> reservations = new ArrayList<Reservation>();
 
     
     //constructeurs

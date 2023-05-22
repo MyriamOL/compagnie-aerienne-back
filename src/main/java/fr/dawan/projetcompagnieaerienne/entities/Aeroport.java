@@ -25,7 +25,7 @@ public class Aeroport implements Serializable{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id_aeroport")
-    private int idAeroport;
+    private long idAeroport;
     
     @Column(name="code_IATA", nullable=false, length=3)
     private String codeIATA;
@@ -48,11 +48,11 @@ public class Aeroport implements Serializable{
 
     
     //getters & setters
-    public int getIdAeroport() {
+    public long getIdAeroport() {
         return idAeroport;
     }
 
-    public void setIdAeroport(int idAeroport) {
+    public void setIdAeroport(long idAeroport) {
         this.idAeroport = idAeroport;
     }
 

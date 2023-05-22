@@ -25,7 +25,7 @@ private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id_utilisateur")
-    private int idUtilisateur;
+    private long idUtilisateur;
     
     @Column(name="nom_utilisateur")
     private String nomUtilisateur;
@@ -44,7 +44,7 @@ private static final long serialVersionUID = 1L;
 
     
     //constructeurs
-    public Utilisateur(int idUtilisateur, String nomUtilisateur, String prenomUtilisateur, String email, String motDePasse) {
+    public Utilisateur(long idUtilisateur, String nomUtilisateur, String prenomUtilisateur, String email, String motDePasse) {
         this.idUtilisateur = idUtilisateur;
         this.nomUtilisateur = nomUtilisateur;
         this.prenomUtilisateur = prenomUtilisateur;
@@ -56,13 +56,13 @@ private static final long serialVersionUID = 1L;
         
     }
 
-    public int getIdUtilisateur() {
+    public long getIdUtilisateur() {
         return idUtilisateur;
     }
 
     
     //getters & setters
-    public void setIdUtilisateur(int idUtilisateur) {
+    public void setIdUtilisateur(long idUtilisateur) {
         this.idUtilisateur = idUtilisateur;
     }
 

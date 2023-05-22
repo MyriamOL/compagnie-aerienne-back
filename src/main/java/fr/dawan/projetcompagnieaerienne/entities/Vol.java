@@ -29,7 +29,7 @@ public class Vol implements Serializable{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id_vol")
-    private int idVol;
+    private long idVol;
     
     @Column(name="date_depart",nullable=false)
     private LocalDateTime dateDepart;
@@ -54,7 +54,7 @@ public class Vol implements Serializable{
     
     
     
-    public Vol(int idVol, LocalDateTime dateDepart, LocalDateTime dateArrivee, int nombrePlacesMax, Aeroport aeroportArrivee, Aeroport aeroportDepart, List<Voyageur> voyageurs) {
+    public Vol(long idVol, LocalDateTime dateDepart, LocalDateTime dateArrivee, int nombrePlacesMax, Aeroport aeroportArrivee, Aeroport aeroportDepart, List<Voyageur> voyageurs) {
         this.idVol = idVol;
         this.dateDepart = dateDepart;
         this.dateArrivee = dateArrivee;
@@ -70,11 +70,11 @@ public class Vol implements Serializable{
 
     
     
-    public int getIdVol() {
+    public long getIdVol() {
         return idVol;
     }
 
-    public void setIdVol(int idVol) {
+    public void setIdVol(long idVol) {
         this.idVol = idVol;
     }
 

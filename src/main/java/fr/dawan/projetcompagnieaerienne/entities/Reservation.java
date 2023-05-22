@@ -14,7 +14,17 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Version;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+import lombok.Setter;
+import lombok.ToString;
+import lombok.ToString.Exclude; 
+
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "reservations")
 public class Reservation implements Serializable {
@@ -27,55 +37,25 @@ public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_reservation")
-    private int idReservation;
+    private long idReservation;
 
     private double prix;
     @OneToMany(mappedBy = "reservation")
+    @Exclude
+    
     List<Voyageur> voyageurs = new ArrayList<>();
 
     @ManyToOne(cascade=CascadeType.REMOVE)
+    @Exclude
     private Utilisateur utilisateur;
 
-    public Reservation(int idReservation, double prix, Utilisateur utilisateur) {
+    public Reservation(long idReservation, double prix, Utilisateur utilisateur) {
         this.idReservation = idReservation;
         this.prix = prix;
         this.utilisateur = utilisateur;
     }
 
-    public Reservation() {
-
-    }
-
-    public int getIdReservation() {
-        return idReservation;
-    }
-
-    public void setIdReservation(int idReservation) {
-        this.idReservation = idReservation;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
-    }
-
-    public List<Voyageur> getVoyageurs() {
-        return voyageurs;
-    }
-
-    public void setVoyageurs(List<Voyageur> voyageurs) {
-        this.voyageurs = voyageurs;
-    }
-
-    public Utilisateur getUtilisateur() {
-        return utilisateur;
-    }
-
-    public void setUtilisateur(Utilisateur utilisateur) {
-        this.utilisateur = utilisateur;
-    }
+    
+   
 
 }

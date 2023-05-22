@@ -1,0 +1,14 @@
+# D.T.O
+Les DTO ou les objets de transfert de données sont des objets qui transportent des données entre les processus afin de réduire le nombre d'appels de méthodes. 
+Le motif a été introduit pour la première fois par Martin Fowler dans son livre EAA.
+
+Fowler a expliqué que l'objectif principal du modèle est de réduire les allers-retours au serveur en répartissant plusieurs paramètres en un seul appel. 
+Cela réduit les frais généraux du réseau dans de telles opérations distantes.
+
+
+> ## EAA
+> Patterns of Enterprise Application Architecture.
+
+
+`<https://www.baeldung.com>`
+`<https://www.baeldung.com/java-dto-pattern>`

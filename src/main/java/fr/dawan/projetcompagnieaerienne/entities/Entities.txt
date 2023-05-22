@@ -1,0 +1,13 @@
+# Le package entities
+
+- Les entités de l'APP ne sont rien d'autre que des POJO représentant des données qui peuvent être persistantes dans la base de données. 
+- Une entité représente une table stockée dans une base de données. Chaque instance d'une entité représente une ligne du tableau.
+
+
+> ## POJO
+> Lorsque nous parlons d'un POJO, ce que nous décrivons est un type simple sans référence à des cadres particuliers. 
+> Un POJO n'a pas de convention de dénomination pour nos propriétés et méthodes.
+
+
+`<https://www.baeldung.com>`
+`<https://www.baeldung.com/jpa-entities-serializable>`

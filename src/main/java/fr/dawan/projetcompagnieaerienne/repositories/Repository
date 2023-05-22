@@ -1,0 +1,19 @@
+# Repositories
+
+Commençons par le JpaRepository - qui s'étend PagingAndSortingRepository et, à son tour, le CrudRepository.
+Chacun de ceux-ci définit sa propre fonctionnalité:
+
+ - CrudRepository fournit des fonctions CRUD
+ - PagingAndSortingRepository forenit des méthodes pour effectuer des enregistrements de pagination et de tri
+ - JpaRepository fournit des méthodes liées à l'APP telles que le rinçage du contexte de persistance et la suppression des enregistrements dans un lot
+
+Et donc, à cause de cette relation d'héritage, le JpaRepository contient l'API complète de CrudRepository et PagingAndSortingRepository.
+Lorsque nous n'avons pas besoin de toutes les fonctionnalités fournies par JpaRepository et PagingAndSortingRepository, nous pouvons simplement utiliser le CrudRepository.
+Jetons maintenant un coup d'œil à un exemple rapide pour mieux comprendre ces API.
+
+`<https://www.baeldung.com>`
+`<https://www.baeldung.com/spring-data-3-crud-repository-interfaces>`
+
+
+## Méthode de requête prise en charge 
+`<https://docs.spring.io/spring-data/jpa/docs/current/reference/html/>`

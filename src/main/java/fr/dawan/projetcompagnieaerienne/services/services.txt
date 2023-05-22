@@ -1,0 +1,6 @@
+# Service
+
+Un ensemble bien connu d'interfaces et de classes de programmation qui donnent accès à certaines fonctionnalités ou fonctionnalités d'application spécifiques.
+
+
+`<https://www.baeldung.com/java-spi>`

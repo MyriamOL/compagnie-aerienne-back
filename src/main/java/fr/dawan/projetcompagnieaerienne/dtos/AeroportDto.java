@@ -1,8 +1,5 @@
 package fr.dawan.projetcompagnieaerienne.dtos;
 
-
-
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,14 +9,16 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-
-
-public class ReservationDto {
+public class AeroportDto {
     
-  
-    private long idReservation;
-    private double prix;
     
-  
+    
+    private long idAeroport;
+    
+    private String codeIATA;
+    
+    private String nom;
+    
+    private String pays;
 
 }

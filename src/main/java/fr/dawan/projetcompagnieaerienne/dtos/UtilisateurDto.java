@@ -2,7 +2,6 @@ package fr.dawan.projetcompagnieaerienne.dtos;
 
 
 
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,14 +11,13 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-
-
-public class ReservationDto {
+public class UtilisateurDto {
     
   
-    private long idReservation;
-    private double prix;
-    
-  
+    private long idUtilisateur;
+    private String nomUtilisateur;
+    private String prenomUtilisateur;
+    private String email;
+    private String motDePasse;
 
 }

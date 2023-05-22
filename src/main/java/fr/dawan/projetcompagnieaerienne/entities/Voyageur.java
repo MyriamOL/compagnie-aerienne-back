@@ -24,7 +24,7 @@ public class Voyageur implements Serializable  {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id_voyageur")
-    private int idVoyageur;
+    private long idVoyageur;
     
     @Column(name="numero_place",nullable=false)
     private int numeroPlace;
@@ -46,7 +46,7 @@ public class Voyageur implements Serializable  {
 
     
     
-    public Voyageur(int idVoyageur, int numeroPlace, String nomVoyageur, String prenomVoyageur, double prixPlace,
+    public Voyageur(long idVoyageur, int numeroPlace, String nomVoyageur, String prenomVoyageur, double prixPlace,
             Reservation reservation, Vol vol) {
         this.idVoyageur = idVoyageur;
         this.numeroPlace = numeroPlace;
@@ -63,11 +63,11 @@ public class Voyageur implements Serializable  {
 
     
     
-    public int getIdVoyageur() {
+    public long getIdVoyageur() {
         return idVoyageur;
     }
 
-    public void setIdVoyageur(int idVoyageur) {
+    public void setIdVoyageur(long idVoyageur) {
         this.idVoyageur = idVoyageur;
     }
 

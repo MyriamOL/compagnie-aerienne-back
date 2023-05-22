@@ -6,7 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import fr.dawan.projetcompagnieaerienne.entities.Reservation;
 
-public interface ReservationRepository extends JpaRepository<Reservation, Integer> {
+public interface ReservationRepository extends JpaRepository<Reservation,Long> {
 
-    List<Reservation> findByNombreAeroportGreaterThan(int nbReservation);
+   // List<Reservation> findByNomLike(String model);
+    
 }

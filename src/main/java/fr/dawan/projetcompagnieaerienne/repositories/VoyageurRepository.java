@@ -9,6 +9,6 @@ import fr.dawan.projetcompagnieaerienne.entities.Voyageur;
 
 public interface VoyageurRepository extends JpaRepository<Voyageur, Long> {
     
-    List<Voyageur> findByNomLike(String model);
+    List<Voyageur> findByNomVoyageurLike(String model);
 
 }

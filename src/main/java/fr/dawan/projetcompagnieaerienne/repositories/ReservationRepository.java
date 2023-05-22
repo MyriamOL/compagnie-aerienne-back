@@ -8,6 +8,6 @@ import fr.dawan.projetcompagnieaerienne.entities.Reservation;
 
 public interface ReservationRepository extends JpaRepository<Reservation,Long> {
 
-    List<Reservation> findByNomLike(String model);
+   // List<Reservation> findByNomLike(String model);
     
 }

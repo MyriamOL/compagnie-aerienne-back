@@ -38,6 +38,24 @@ public class Reservation implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_reservation")
     private long idReservation;
+    
+    @Column(name = "numero_vol")
+    private String numeroVol;
+    
+    @Column(name = "aeroport_depart")
+    private String aeroportDepart;
+    
+    @Column(name = "aeroport_arrivee")
+    private String aeroportArrivee;
+    
+    
+    @Column(name = "date_depart")
+    private String dateDepart;
+    
+    @Column(name = "date_arrivee")
+    private String dateArrivee;
+    
+    
 
     private double prix;
     @OneToMany(mappedBy = "reservation")
@@ -49,11 +67,24 @@ public class Reservation implements Serializable {
     @Exclude
     private Utilisateur utilisateur;
 
-    public Reservation(long idReservation, double prix, Utilisateur utilisateur) {
+    public Reservation(long idReservation, String numeroVol, String aeroportDepart, String aeroportArrivee,
+            String dateDepart, String dateArrivee, double prix, Utilisateur utilisateur) {
         this.idReservation = idReservation;
+        this.numeroVol = numeroVol;
+        this.aeroportDepart = aeroportDepart;
+        this.aeroportArrivee = aeroportArrivee;
+        this.dateDepart = dateDepart;
+        this.dateArrivee = dateArrivee;
         this.prix = prix;
         this.utilisateur = utilisateur;
     }
+
+//    public Reservation(long idReservation, double prix, Utilisateur utilisateur) {
+//        this.idReservation = idReservation;
+//        this.prix = prix;
+//        this.utilisateur = utilisateur;
+//        this.
+//    }
 
     
    

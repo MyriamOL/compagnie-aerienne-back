@@ -12,13 +12,14 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-
-
 public class ReservationDto {
     
   
     private long idReservation;
+    private String aeroportArrivee;
+    private String dateDepart;
     private double prix;
+    private String aeroportDepart;
     
   
 

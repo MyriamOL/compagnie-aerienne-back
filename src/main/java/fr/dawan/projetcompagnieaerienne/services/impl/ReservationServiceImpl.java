@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import fr.dawan.projetcompagnieaerienne.dtos.ReservationDto;
@@ -21,8 +22,8 @@ public class ReservationServiceImpl implements ReservationService {
     private ModelMapper mapper;
     
     @Override
-    public List<ReservationDto> getAllReservation() {
-        return repository.findAll().stream().map(m -> mapper.map(m, ReservationDto.class)).collect(Collectors.toList());
+    public List<ReservationDto> getAllReservation(Pageable page) {
+        return repository.findAll(page).stream().map(m -> mapper.map(m, ReservationDto.class)).collect(Collectors.toList());
     }
 
    

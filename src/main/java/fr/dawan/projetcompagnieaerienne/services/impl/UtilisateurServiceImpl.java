@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 
 import fr.dawan.projetcompagnieaerienne.dtos.UtilisateurDto;
 
@@ -13,13 +13,13 @@ import fr.dawan.projetcompagnieaerienne.entities.Utilisateur;
 import fr.dawan.projetcompagnieaerienne.repositories.UtilisateurRepository;
 import fr.dawan.projetcompagnieaerienne.services.UtilisateurService;
 
+@Service
 public class UtilisateurServiceImpl implements UtilisateurService {
     
     @Autowired
     private UtilisateurRepository repository;
     @Autowired
     private ModelMapper mapper;
-    
     
     
     @Override

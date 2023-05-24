@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import fr.dawan.projetcompagnieaerienne.services.ReservationService;
 
 
 @RestController
+@CrossOrigin(origins = "*") // a voir avec Christophe 
 @RequestMapping("api/reservations")
 public class ReservationController {
 
@@ -43,7 +45,7 @@ public class ReservationController {
   //Ajouter une reservations
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ReservationDto addMarque(@RequestBody ReservationDto reservationDto) {
+    public ReservationDto addReservation(@RequestBody ReservationDto reservationDto) {
         return reservationService.saveOrUpdate(reservationDto);
     }
     

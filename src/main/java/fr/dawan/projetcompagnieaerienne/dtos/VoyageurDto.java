@@ -1,8 +1,5 @@
 package fr.dawan.projetcompagnieaerienne.dtos;
 
-import java.time.LocalDateTime;
-
-import fr.dawan.projetcompagnieaerienne.entities.Aeroport;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,12 +15,5 @@ public class VoyageurDto {
     private String nomVoyageur;
     private String prenomVoyageur;
     private double prixPlace;
-    
-    
-    
-    
-    
-    
-    
 
 }
